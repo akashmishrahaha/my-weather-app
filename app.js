@@ -67,6 +67,7 @@ window.onload = () => {
       const aboutWeather = document.querySelector(".info");
       time.textContent = h + ":" + m + ":" + s;
       day.textContent = d + " " + month + " " + year;
+      const inputPlace = document.querySelector(".inputPlace");
 
       // Style
 
@@ -82,6 +83,7 @@ window.onload = () => {
         background.style.backgroundPosition = "center";
         background.style.backgroundRepeat = "no-repeat";
         background.style.backgroundSize = "cover";
+        inputPlace.style.borderBottomColor = "lightblue";
       }
       if (temperature < 0) {
         season = "Winter";
@@ -90,12 +92,17 @@ window.onload = () => {
         background.style.backgroundImage = 'url("/img/2.jpg")';
         background.style.backgroundPosition = "center";
         background.style.backgroundRepeat = "no-repeat";
+        hr.forEach((hrs) => {
+          hrs.style.color = "lightblue";
+        });
+        inputPlace.style.borderBottomColor = "lightblue";
         background.style.backgroundSize = "cover";
       } else if (temperature > 25) {
         season = "Summer";
         background.style.backgroundImage = 'url("/img/11.jpg")';
         background.style.backgroundPosition = "center";
         background.style.backgroundRepeat = "no-repeat";
+        inputPlace.style.borderBottomColor = "yellow";
         background.style.backgroundSize = "cover";
         changeWinterStyle(secondDiv);
         hr.forEach((hrs) => {
@@ -116,9 +123,6 @@ window.onload = () => {
         changeAutumnStyle(secondDiv);
         aboutWeather.textContent = season;
       }
-
-      const inputPlace = document.querySelector(".inputPlace");
-      inputPlace.style.borderBottomColor = "yellow";
 
       // Placename and country
       const placename = document.querySelector(".placename");
