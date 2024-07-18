@@ -92,6 +92,7 @@ window.onload = () => {
         background.style.backgroundImage = 'url("/img/2.jpg")';
         background.style.backgroundPosition = "center";
         background.style.backgroundRepeat = "no-repeat";
+        changeWinterStyle(secondDiv);
         hr.forEach((hrs) => {
           hrs.style.color = "lightblue";
         });
@@ -104,7 +105,7 @@ window.onload = () => {
         background.style.backgroundRepeat = "no-repeat";
         inputPlace.style.borderBottomColor = "yellow";
         background.style.backgroundSize = "cover";
-        changeWinterStyle(secondDiv);
+        changeSummerStyle(secondDiv);
         hr.forEach((hrs) => {
           hrs.style.color = "yellow";
         });
