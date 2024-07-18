@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* border: 10px solid rgb(13, 55, 89); */
+  color: white;
+  font-family: "Ubuntu", monospace;
+}
+
+.second-div {
+  position: relative;
+  z-index: 1;
+  /* Ensure the content is above the pseudo-element */
+}
+
+.second-div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  /* Fallback for old browsers */
+  background: #085078;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #85d8ce, #085078);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #85d8ce, #085078);
+  background: url("/img/winter.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(30%);
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.first-div {
+  min-height: 100vh;
+  /* width: 70%; */
+  flex: 1 1 70%;
+}
+.second-div {
+  /* width: 30%; */
+  flex: 1 1 30%;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.logodiv {
+  margin-top: 30px;
+}
+
+.info {
+  margin-top: 30px;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  font-family: "VT323", monospace;
+}
+
+hr {
+  width: 100%;
+  color: blueviolet;
+  margin-bottom: 30px;
+}
+
+.hr1 {
+  width: 90%;
+  color: blueviolet;
+  margin-bottom: 30px;
+}
+
+img {
+  display: block;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.search input {
+  padding: 10px;
+  border: none;
+  background: none;
+  border-bottom: 4px solid rgb(99, 99, 242);
+  color: white;
+  margin-bottom: 30px;
+}
+
+.search input:focus {
+  font-size: 16px;
+  outline: none;
+  font-weight: bold;
+}
+
+.hr2 {
+  width: 100%;
+  color: blueviolet;
+  margin-bottom: 30px;
+}
+
+.divclass {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-div {
+  padding: 20px;
+  font-weight: bold;
+  width: 80%;
+}
+
+.placediv {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 40px;
+  min-height: 80vh;
+}
+
+.placename {
+  text-align: right;
+}
+
+.country {
+  text-align: right;
+}
+
+.timeanddate {
+  border: 1px solid yellow;
+
+  /* From https://css.glass */
+  background: rgba(127, 127, 127, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(127, 127, 127, 0.3);
+}
+
+.infodiv {
+  min-height: 20vh;
+  padding: 40px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  font-size: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temperature {
+  font-size: 60px;
+}
+
+/* Responsiveness */
+
+.search-icon {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .placediv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .infodiv {
+    font-size: 20px;
+    gap: 10px;
+  }
+}

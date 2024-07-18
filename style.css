@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Anton SC", sans-serif;
+  background: rgb(49, 74, 213);
+  background: radial-gradient(
+    circle,
+    rgba(49, 74, 213, 1) 0%,
+    rgba(36, 11, 88, 1) 98%
+  );
+  color: white;
+  /* From https://css.glass */
+  font-size: 62.5%;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  min-height: 70vh;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.main-container h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.labelOne {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.place {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.submit {
+  display: block;
+  padding: 1rem;
+  border: none;
+  background-color: white;
+  color: #364fc7;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.submit:hover {
+  background-color: #364fc7;
+  color: white;
+}
+
+.submit:active {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+#displaySpace {
+  border: 1px solid rgba(255, 255, 255, 0.594);
+  min-height: 40vh;
+  font-size: 3rem;
+}
