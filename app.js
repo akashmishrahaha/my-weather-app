@@ -66,7 +66,7 @@ window.onload = () => {
       const logotop = document.querySelector(".logotop");
       const aboutWeather = document.querySelector(".info");
       time.textContent = h + ":" + m + ":" + s;
-      day.textContent = d + " " + month + " " + year;
+      day.textContent = d + "/" + month + "/" + year;
       const inputPlace = document.querySelector(".inputPlace");
 
       // Style
