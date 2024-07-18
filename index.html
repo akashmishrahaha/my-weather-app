@@ -4,60 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <script src="/app.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./img/cloudy.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script src="config.js"></script>
+    <script src="app.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="main-container">
-        <h1>This is a weather app</h1>
-        <form action="">
-          <label class="labelOne" for="">Enter your place</label>
-          <input
-            class="place"
-            type="text"
-            name=""
-            id=""
-            placeholder="Enter your place ex: berlin"
-          />
-          <input class="submit" type="submit" value="submit" />
-          <div id="displaySpace">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="yellow"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-              />
-            </svg>
+    <div class="main-container">
+      <div class="first-div">
+        <div class="divv1">
+          <div class="placediv">
+            <p class="placename">Mumbai</p>
+            <p class="country">IN</p>
           </div>
-        </form>
+        </div>
+        <div class="timeanddate">
+          <div class="infodiv">
+            <div>
+              <div class="time">19:34:20</div>
+              <div class="day">Wednesday, 15 Feb 2023</div>
+            </div>
+            <div class="temperature">22°C</div>
+          </div>
+        </div>
+      </div>
+      <div class="second-div">
+        <div class="logodiv">
+          <img class="logotop" src="/svg/snowman.png" alt="" width="200" />
+        </div>
+        <div class="belowlogo">
+          <p class="info">Winter</p>
+          <hr />
+          <div class="search">
+            <input class="inputPlace" type="text" />
+            <img
+              class="search-icon"
+              src="/svg/search-circle-outline.svg"
+              alt=""
+              width="50"
+            />
+          </div>
+        </div>
+        <div class="place">
+          <p class="placeinfo">Mumbai</p>
+        </div>
+        <hr class="hr1" />
+
+        <div class="main-div">
+          <div class="divclass">
+            <p class="temp">Temperature</p>
+            <p class="tempvalue">22°C</p>
+          </div>
+          <hr class="hr2" />
+
+          <div class="divclass">
+            <p>Humidity</p>
+            <p class="humidityValue">23%</p>
+          </div>
+          <hr class="hr2" />
+
+          <div class="divclass">
+            <p>Visibility</p>
+            <p class="visibilityValue">4000 mi</p>
+          </div>
+          <hr class="hr2" />
+
+          <div class="divclass">
+            <p>Wind Speed</p>
+            <p class="windValue">3 km/h</p>
+          </div>
+          <hr class="hr2" />
+        </div>
       </div>
     </div>
   </body>
